@@ -8,29 +8,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* Visual Studio 2017+
+* Azure Event Hub
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+#### Azure Resource Group
 
-Say what the step will be
+#### Azure Data Lake
 
-```
-Give the example
-```
+Create an Azure Data Lake
 
-And repeat
+Configure permissions for Event Hub Capture: https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-archive-eventhub-capture
 
-```
-until finished
-```
+#### Azure Event Hub
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
