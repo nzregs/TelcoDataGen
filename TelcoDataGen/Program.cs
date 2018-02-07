@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System.Collections.Generic;
 using Microsoft.ServiceBus.Messaging;
 using TelcoDataGen.secrets;
 using TelcoDataGen.model;
@@ -26,7 +24,7 @@ namespace TelcoDataGen
             {
                 Console.WriteLine("Simulated cell tower\n");
                 
-                hubClient = EventHubClient.CreateFromConnectionString(secrets.eventHubName, secrets.eventHubConnectionString);
+                hubClient = EventHubClient.CreateFromConnectionString(secrets.eventHubConnectionString, secrets.eventHubName);
 
                 // Randomly create instances of the store actions, such as add view remove and checkout a product, 
                 // convert it into a JSON string and sends to the IoT Hub.
@@ -159,7 +157,7 @@ namespace TelcoDataGen
 
             int hour = TimeZoneInfo.ConvertTime(DateTime.UtcNow, userZone).Hour;
 
-            if (hour >= 22 && hour <= 5)
+            if (hour >= 22 || hour <= 5)
             {
                 Thread.Sleep(900);
             }
