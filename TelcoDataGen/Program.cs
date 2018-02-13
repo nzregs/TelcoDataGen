@@ -8,7 +8,7 @@ using Newtonsoft.Json.Serialization;
 using Microsoft.ServiceBus.Messaging;
 using TelcoDataGen.secrets;
 using TelcoDataGen.model;
-using TelcoDataGen.sampledata;
+
 
 namespace TelcoDataGen
 {
@@ -48,7 +48,7 @@ namespace TelcoDataGen
         private static void GenerateRandomEvents()
         {
             // Load Sample Data Towers into list
-            var towerList = SampleData.GetTowers().ToList();
+            var towerList = SampleData_Towers.GetTowers().ToList();
             var towerWeight = new List<int>() { 2, 4, 2, 6, 10, 3, 3, 16, 4, 13, 3, 7, 7, 4, 6, 4, 4, 2 };
 
             // Load sample mobile numbers into list

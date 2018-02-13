@@ -66,14 +66,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\CallDetailRecord.cs" />
+    <Compile Include="model\DataSpecials.cs" />
+    <Compile Include="model\Subscriber.cs" />
     <Compile Include="model\Tower.cs" />
+    <Compile Include="model\Website.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sampledata\SampleData.cs" />
+    <Content Include="asa_queries_sampledata\asa_query.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="sampledata\DataSpecials.cs" />
+    <Compile Include="sampledata\Subscribers.cs" />
+    <Compile Include="sampledata\Towers.cs" />
+    <Compile Include="sampledata\Websites.cs" />
     <Compile Include="secrets\AppSecrets.cs" />
+    <Content Include="referencefiles\dbo.Table.Billing_Calls.sql" />
+    <Content Include="referencefiles\dbo.Table.Subscriber.sql" />
     <None Include="deploy_start_datagen.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="asa_queries_sampledata\towerstream-streamdata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="referencefiles\hivequeries.sql" />
+    <None Include="referencefiles\subscribers.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -91,5 +107,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

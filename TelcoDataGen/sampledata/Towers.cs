@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using TelcoDataGen.model;
 
-namespace TelcoDataGen.sampledata
+namespace TelcoDataGen
 {
-        public static class SampleData
+        public static class SampleData_Towers
         {
             public static IEnumerable<Tower> GetTowers()
             {
